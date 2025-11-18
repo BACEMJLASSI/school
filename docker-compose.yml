@@ -26,6 +26,11 @@ services:
       }'
     stdin_open: true
     tty: true
-
+app-school-fronted:
+image: bacemjlassi/studentdashboard-image:1.0.0
+restart:on-failure
+ports: - "8585:85"
+depends_on:
+- app-backend
 volumes:
   db :
